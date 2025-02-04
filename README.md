@@ -1,0 +1,1 @@
+[Las key para controlar](https://www.pygame.org/docs/ref/key.html)
