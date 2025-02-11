@@ -13,30 +13,30 @@ Este proyecto consiste en desarrollar un prototipo de taxímetro digital utiliza
 
 Desarrollar un programa CLI (Interfaz de Línea de Comandos) en Python.
 
-- Al iniciar, el programa debe dar la bienvenida y explicar su funcionamiento.
+- [x] Al iniciar, el programa debe dar la bienvenida y explicar su funcionamiento.
 - Implementar las siguientes funcionalidades básicas:
-  - Iniciar un trayecto.
-  - Calcular tarifa mientras el taxi está parado (2 céntimos por segundo).
-  - Calcular tarifa mientras el taxi está en movimiento (5 céntimos por segundo).
-  - Finalizar un trayecto y mostrar el total en euros.
-  - Permitir iniciar un nuevo trayecto sin cerrar el programa.
+  - [x] Iniciar un trayecto.
+  - [x] Calcular tarifa mientras el taxi está parado (2 céntimos por segundo).
+  - [x] Calcular tarifa mientras el taxi está en movimiento (5 céntimos por segundo).
+  - [x] Finalizar un trayecto y mostrar el total en euros.
+  - [x] Permitir iniciar un nuevo trayecto sin cerrar el programa.
 
 ### 🟡 Nivel Medio
 
 - Implementar un sistema de logs para la trazabilidad del código.
 - Agregar tests unitarios para asegurar el correcto funcionamiento del programa.
-- Crear un registro histórico de trayectos pasados en un archivo de texto plano.
-- Permitir la configuración de precios para adaptarse a la demanda actual.
+- [x] Crear un registro histórico de trayectos pasados en un archivo de texto plano.
+- [x] Permitir la configuración de precios para adaptarse a la demanda actual.
 
 ### 🟠 Nivel Avanzado
 
 - Refactorizar el código utilizando un enfoque orientado a objetos (OOP).
-- Implementar un sistema de autenticación con contraseñas para proteger el acceso al programa.
+- [x] Implementar un sistema de autenticación con contraseñas para proteger el acceso al programa.
 - Desarrollar una interfaz gráfica de usuario (GUI) para hacer el programa más amigable.
 
 ### 🔴 Nivel Experto
 
-- Integrar una base de datos para almacenar los registros de trayectos pasados.
+- [x] Integrar una base de datos para almacenar los registros de trayectos pasados.
 - Dockerizar la aplicación para facilitar su despliegue y portabilidad.
 - Desarrollar una versión web de la aplicación accesible a través de internet.
 
@@ -69,4 +69,39 @@ Dos semanas a partir de la fecha de inicio del proyecto.
 - Documenta tu código y mantén un registro de los cambios y decisiones de diseño.
 - Considera la usabilidad y la experiencia del usuario, incluso en la versión CLI.
 
-[Las key para controlar](https://www.pygame.org/docs/ref/key.html)
+
+# Mí solución
+
+- [x] creación de un entorno CLI; necesitaremos:
+    -[x] base de datos PostgreSQL
+        - Utilice [mkdb](https://www.mkdb.sh/) es gratuido y funciona muy bien, podeis usar el que se ajuste a vuestras necesidades. Las tablas que usaremos sera:
+
+        ```
+        CREATE TABLE IF NOT EXISTS precios(id SERIAL PRIMARY KEY, estado CHAR(20) NOT NULL, precio FLOAT)
+        CREATE TABLE IF NOT EXISTS trayecto(id SERIAL PRIMARY KEY, fecha TIMESTAMP NOT NULL DEFAULT NOW(), precio DECIMAL(10,2) NOT NULL)
+        CREATE TABLE IF NOT EXISTS usuarios(id SERIAL PRIMARY KEY, nombre VARCHAR(100) NOT NULL, usuario VARCHAR(50) NIQUE NOT NULL)
+        ```
+        Esas seran las tres principales tablas
+        - Dependencias:
+        tendremos que instalar para poder   
+
+        ```
+          
+        ```
+        Para instalar las dependencias, terminal, ser:
+
+        ```
+        $ pip install -r requirements.txt
+        ```
+  - [x] Experimental:
+      - [x] Comandos de voz:
+            para ello usaremos 'speech_recognition' de Google, es gratuito, especial atención en la linea 19 donde indicamos el idioma que queremos que reconozca
+            
+            ```
+            UserVoiceInput_converted_to_Text = UserVoiceRecognizer.recognize_google(UserVoiceInput, language='es-ES', show_all=False)
+            ```
+      - [x] Nos dice el menú
+            para que nos diga el menú de forma hablada usaremos 'pyttsx3' simplemente le mandamos un texto y nos lo pasa a voz
+
+[Seguimiento](https://github.com/users/juancmacias/projects/9/views/1?pane=issue&itemId=96968205)
+
