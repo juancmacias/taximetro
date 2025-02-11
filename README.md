@@ -42,12 +42,13 @@ Desarrollar un programa CLI (Interfaz de Línea de Comandos) en Python.
 
 ## 🛠️ Tecnologías a Utilizar
 
-- Python
-- Git y GitHub para control de versiones
-- Trello o Jira para la gestión del proyecto
-- Bibliotecas adicionales según el nivel de implementación (por ejemplo, logging, unittest, tkinter para GUI, SQLite para base de datos)
+- [x]Python
+- [x]Git y GitHub para control de versiones
+- [x]Trello o Jira para la gestión del proyecto [Projects GitHub](https://github.com/users/juancmacias/projects/9)
+- [x]Bibliotecas adicionales según el nivel de implementación: PostgreSQL, pandas, speech_recognition, pyttsx3. pygame (por ejemplo, logging, unittest, tkinter para GUI, SQLite para base de datos)
 - Docker para containerización (nivel experto)
 - Framework web como Flask o Django para la versión web (nivel experto)
+
 
 ## 📦 Entregables
 
@@ -55,7 +56,7 @@ Desarrollar un programa CLI (Interfaz de Línea de Comandos) en Python.
 - Demostración del CLI desarrollado.
 - Presentación para público no técnico.
 - Presentación técnica del código, destacando fortalezas y debilidades.
-- Enlace al tablero Kanban utilizado para la organización del proyecto.
+- Enlace al tablero Kanban (GitHub proyectos) utilizado para la organización del proyecto.
 
 ## ⏳ Plazo de Entrega
 
