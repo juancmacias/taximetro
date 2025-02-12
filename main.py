@@ -28,13 +28,8 @@ locale.setlocale(locale.LC_ALL, '')
 class Taximetro:
     # Constructor
     def __init__(self):
-        def precio(query):
-            con.cursor.execute(query)
-            for pay in con.cursor:
-                return pay[2]
-            con.cursor.close()
-        self.tarifa_parado = precio("SELECT * FROM precios WHERE estado = 'parado'")  
-        self.tarifa_movimiento = precio("SELECT * FROM precios WHERE estado = 'marcha'")  
+        self.tarifa_parado = con.sql_select('precios', 'parado')
+        self.tarifa_movimiento = con.sql_select('precios', 'marcha')
         self.total = 0
         self.en_trayecto = False
     # uncion para iniciar trayecto, definir variables y calcular tarifa nuevos
