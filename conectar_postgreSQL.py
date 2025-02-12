@@ -1,3 +1,4 @@
+# install psycopg2-binary
 import psycopg2
 import conf.sql as pas_sql
 

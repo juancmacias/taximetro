@@ -1,5 +1,5 @@
 # Pasar de audio a texto con la librería SpeechRecognition
- 
+# install SpeechRecognition
 import speech_recognition
  
 # Inicializar el reconocedor de voz, Recognizer
