@@ -12,7 +12,7 @@ import getpass
 from time import sleep
 from datetime import datetime
 import keyboard as kb
-#import msvcrt
+import msvcrt
 
 from colorama import Cursor, init, Fore, Back, Style
 
@@ -74,8 +74,8 @@ class Taximetro:
 
     def finalizar_trayecto(self):
         # para limpiar el buffer de entrada mientras hacemos el trayecto
-        #while msvcrt.kbhit():
-        #    msvcrt.getch()
+        while msvcrt.kbhit():
+            msvcrt.getch()
             
         print("\033[2J\033[1;1f")
         sys.stdin.flush()

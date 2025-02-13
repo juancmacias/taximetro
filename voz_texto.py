@@ -8,6 +8,8 @@ UserVoiceRecognizer = speech_recognition.Recognizer()
 # siempre escuchando
 def escuchar():
     while (1):
+        print("\033[2J\033[1;1f")
+        print("Escuchando...")
         try:
             # El micrófono del usuario se utiliza como fuente de entrada de voz.
             with speech_recognition.Microphone() as UserVoiceInputSource:
@@ -20,7 +22,7 @@ def escuchar():
                 # Convertir el texto a minúsculas
                 UserVoiceInput_converted_to_Text = UserVoiceInput_converted_to_Text.lower()
                 # Imprimir el texto convertido
-                #print(UserVoiceInput_converted_to_Text)
+                print(UserVoiceInput_converted_to_Text)
                 return UserVoiceInput_converted_to_Text
         except KeyboardInterrupt:
             print('El programa se cerró por el usuario')

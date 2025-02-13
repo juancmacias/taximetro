@@ -1,9 +1,11 @@
 # install psycopg2-binary
 import psycopg2
 import conf.sql as pas_sql
-
-connection = psycopg2.connect(f"postgresql://{pas_sql.user_sql}:{pas_sql.password_sql}@alpha.europe.mkdb.sh:5432/{pas_sql.table_sql}")
-cursor = connection.cursor()
+try:
+    connection = psycopg2.connect(f"postgresql://{pas_sql.user_sql}:{pas_sql.password_sql}@alpha.europe.mkdb.sh:5432/{pas_sql.table_sql}")
+    cursor = connection.cursor()
+except: 
+      print("No se ha podido conectar a la base de datos.")
 # insertar datos
 def insertar_sql(eje):
     cursor.execute(eje)

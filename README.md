@@ -2,7 +2,11 @@
 
 ![Banner Proyectos](https://raw.githubusercontent.com/juancmacias/taximetro/refs/heads/main/imagenes/ico.webp)
 Imagen creada con IA Recraft
-
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> </p>
+<p align="left">
+  <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
+</p>
 ## 📝 Descripción del Proyecto
 
 Este proyecto consiste en desarrollar un prototipo de taxímetro digital utilizando Python. El objetivo es modernizar el sistema de facturación de los taxis y crear un sistema que calcule las tarifas a cobrar a los clientes de manera precisa y eficiente.
@@ -77,32 +81,31 @@ Dos semanas a partir de la fecha de inicio del proyecto.
     -[x] base de datos PostgreSQL
         - Utilice [mkdb](https://www.mkdb.sh/) es gratuido y funciona muy bien, podeis usar el que se ajuste a vuestras necesidades. Las tablas que usaremos sera:
 
+
+## Base de datos
+      
         ```
         CREATE TABLE IF NOT EXISTS precios(id SERIAL PRIMARY KEY, estado CHAR(20) NOT NULL, precio FLOAT)
         CREATE TABLE IF NOT EXISTS trayecto(id SERIAL PRIMARY KEY, fecha TIMESTAMP NOT NULL DEFAULT NOW(), precio DECIMAL(10,2) NOT NULL)
         CREATE TABLE IF NOT EXISTS usuarios(id SERIAL PRIMARY KEY, nombre VARCHAR(100) NOT NULL, usuario VARCHAR(50) NIQUE NOT NULL)
         ```
-        Esas seran las tres principales tablas
-        - Dependencias:
-        tendremos que instalar para poder   
 
-        ```
-          
-        ```
-        Para instalar las dependencias, terminal, ser:
+        Esas seran las tres principales tablas
+## Dependencias:
+        
+Para instalar las dependencias, terminal, ser:
 
         ```
         $ pip install -r requirements.txt
         ```
-  - [x] Experimental:
-      - [x] Comandos de voz:
+## [x] Experimental:
+- [x] Comandos de voz:
             para ello usaremos 'speech_recognition' de Google, es gratuito, especial atención en la linea 19 donde indicamos el idioma que queremos que reconozca
             
             ```
             UserVoiceInput_converted_to_Text = UserVoiceRecognizer.recognize_google(UserVoiceInput, language='es-ES', show_all=False)
             ```
-      - [x] Nos dice el menú
+- [x] Nos dice el menú
             para que nos diga el menú de forma hablada usaremos 'pyttsx3' simplemente le mandamos un texto y nos lo pasa a voz
 
-[Seguimiento](https://github.com/users/juancmacias/projects/9/views/1?pane=issue&itemId=96968205)
 
