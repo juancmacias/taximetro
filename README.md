@@ -1,12 +1,18 @@
 # 🚕 Proyecto Python: Taxímetro Digital
 
-![Banner Proyectos](https://raw.githubusercontent.com/juancmacias/taximetro/refs/heads/main/imagenes/ico.webp)
+
+
 Imagen creada con IA Recraft
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> </p>
-<p align="left">
-  <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
+
+<img src="https://raw.githubusercontent.com/juancmacias/taximetro/refs/heads/main/imagenes/ico.webp">
+
+<img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="python"> 
+<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostGreSQL">
+<img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="Visual Studio">
+
+<p align="left"><img src="https://img.shields.io/badge/Juan%20Carlos%20Macias-lightgray.svg">  <img src="https://img.shields.io/github/created-at/juancmacias/taximetro">
 </p>
+
 ## 📝 Descripción del Proyecto
 
 Este proyecto consiste en desarrollar un prototipo de taxímetro digital utilizando Python. El objetivo es modernizar el sistema de facturación de los taxis y crear un sistema que calcule las tarifas a cobrar a los clientes de manera precisa y eficiente.
@@ -17,39 +23,39 @@ Este proyecto consiste en desarrollar un prototipo de taxímetro digital utiliza
 
 Desarrollar un programa CLI (Interfaz de Línea de Comandos) en Python.
 
-- [x] Al iniciar, el programa debe dar la bienvenida y explicar su funcionamiento.
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Al iniciar, el programa debe dar la bienvenida y explicar su funcionamiento.
 - Implementar las siguientes funcionalidades básicas:
-  - [x] Iniciar un trayecto.
-  - [x] Calcular tarifa mientras el taxi está parado (2 céntimos por segundo).
-  - [x] Calcular tarifa mientras el taxi está en movimiento (5 céntimos por segundo).
-  - [x] Finalizar un trayecto y mostrar el total en euros.
-  - [x] Permitir iniciar un nuevo trayecto sin cerrar el programa.
+  - ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Iniciar un trayecto.
+  - ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Calcular tarifa mientras el taxi está parado (2 céntimos por segundo).
+  - ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Calcular tarifa mientras el taxi está en movimiento (5 céntimos por segundo).
+  - ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Finalizar un trayecto y mostrar el total en euros.
+  - ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Permitir iniciar un nuevo trayecto sin cerrar el programa.
 
 ### 🟡 Nivel Medio
 
 - Implementar un sistema de logs para la trazabilidad del código.
 - Agregar tests unitarios para asegurar el correcto funcionamiento del programa.
-- [x] Crear un registro histórico de trayectos pasados en un archivo de texto plano.
-- [x] Permitir la configuración de precios para adaptarse a la demanda actual.
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Crear un registro histórico de trayectos pasados en un archivo de texto plano.
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Permitir la configuración de precios para adaptarse a la demanda actual.
 
 ### 🟠 Nivel Avanzado
 
 - Refactorizar el código utilizando un enfoque orientado a objetos (OOP).
-- [x] Implementar un sistema de autenticación con contraseñas para proteger el acceso al programa.
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Implementar un sistema de autenticación con contraseñas para proteger el acceso al programa.
 - Desarrollar una interfaz gráfica de usuario (GUI) para hacer el programa más amigable.
 
 ### 🔴 Nivel Experto
 
-- [x] Integrar una base de datos para almacenar los registros de trayectos pasados.
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Integrar una base de datos para almacenar los registros de trayectos pasados.
 - Dockerizar la aplicación para facilitar su despliegue y portabilidad.
 - Desarrollar una versión web de la aplicación accesible a través de internet.
 
 ## 🛠️ Tecnologías a Utilizar
 
-- [x]Python
-- [x]Git y GitHub para control de versiones
-- [x]Trello o Jira para la gestión del proyecto [Projects GitHub](https://github.com/users/juancmacias/projects/9)
-- [x]Bibliotecas adicionales según el nivel de implementación: PostgreSQL, pandas, speech_recognition, pyttsx3. pygame (por ejemplo, logging, unittest, tkinter para GUI, SQLite para base de datos)
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg)Python
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg)Git y GitHub para control de versiones
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg)Trello o Jira para la gestión del proyecto [Projects GitHub](https://github.com/users/juancmacias/projects/9)
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg)Bibliotecas adicionales según el nivel de implementación: PostgreSQL, pandas, speech_recognition, pyttsx3. pygame (por ejemplo, logging, unittest, tkinter para GUI, SQLite para base de datos)
 - Docker para containerización (nivel experto)
 - Framework web como Flask o Django para la versión web (nivel experto)
 
@@ -77,8 +83,8 @@ Dos semanas a partir de la fecha de inicio del proyecto.
 
 # Mí solución
 
-- [x] creación de un entorno CLI; necesitaremos:
-    -[x] base de datos PostgreSQL
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) creación de un entorno CLI; necesitaremos:
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) base de datos PostgreSQL:
         - Utilice [mkdb](https://www.mkdb.sh/) es gratuido y funciona muy bien, podeis usar el que se ajuste a vuestras necesidades. Las tablas que usaremos sera:
 
 
@@ -98,14 +104,19 @@ Para instalar las dependencias, terminal, ser:
         ```
         $ pip install -r requirements.txt
         ```
-## [x] Experimental:
-- [x] Comandos de voz:
-            para ello usaremos 'speech_recognition' de Google, es gratuito, especial atención en la linea 19 donde indicamos el idioma que queremos que reconozca
+Instalar el entorno para mejorar la eficación de ejecución.
+## ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Experimental:
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Juego de práctica:
+        Los operarios puede practicar con el entorno para mejorar su rendimiento en el desarrollo de sus funciones
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Comandos de voz:
+        para ello usaremos 'speech_recognition' de Google, es gratuito, especial atención en la linea 19 donde indicamos el idioma que queremos que reconozca
             
             ```
             UserVoiceInput_converted_to_Text = UserVoiceRecognizer.recognize_google(UserVoiceInput, language='es-ES', show_all=False)
             ```
-- [x] Nos dice el menú
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Nos dice el menú
             para que nos diga el menú de forma hablada usaremos 'pyttsx3' simplemente le mandamos un texto y nos lo pasa a voz
 
+[Readme-Workflows/Readme-Icons CDN files](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/)
 
+[Las key para controlar](https://www.pygame.org/docs/ref/key.html)
