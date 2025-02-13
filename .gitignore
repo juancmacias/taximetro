@@ -1,0 +1,4 @@
+conf
+assets
+.venv
+__pycache__
