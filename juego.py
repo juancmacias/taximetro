@@ -5,7 +5,7 @@ from time import sleep
 import random
 from os.path import abspath, dirname
 import conectar_postgreSQL as con
-
+pygame.mixer.pre_init(44100, -16, 2, 2048)
 # Inicialización de Pygame
 pygame.init()
 locale.setlocale(locale.LC_ALL, '')
@@ -13,6 +13,7 @@ locale.setlocale(locale.LC_ALL, '')
 BASE_PATH = abspath(dirname(__file__))
 FONT_PATH = BASE_PATH + "/fonts/"
 IMAGE_PATH = BASE_PATH + "/imagenes/"
+SOUND_PATH = BASE_PATH + "/sound/"
 
 # fondo de la ventana
 imagen_fondo = pygame.image.load(IMAGE_PATH + 'fondo.jpg')
@@ -24,7 +25,10 @@ SCREEN_WIDTH, SCREEN_HEIGHT = 626, 547
 # Inicialización de la superficie de dibujo
 ventana = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Taximetro")
-
+# Iniciar el sonido
+#pygame.mixer.init()
+sound_init = pygame.mixer.Sound(SOUND_PATH + 'inicio.mp3')
+sound_choque = pygame.mixer.Sound(SOUND_PATH + 'crash.mp3')
 
 pay_parado = con.sql_select('precios', 'parado')  
 pay_movimiento = con.sql_select('precios', 'marcha')
@@ -54,12 +58,17 @@ def action():
     x_obstaculo = -100
     y_obstaculo = random.randint(400, 470)
     while playing:
+        sound_init.set_volume(0)
+        sound_choque.set_volume(10)
+        
         x_obstaculo += 1
         x -= 0.01
         # Comprobamos los eventos
         #Comprobamos si se ha pulsado el botón de cierre de la ventana
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                sound_choque.set_volume(0)
+                sound_init.set_volume(10)
                 playing = False
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
@@ -114,7 +123,8 @@ def action():
         
         # Compruebo si el taxi choca con el obstáculo
         if taxirect.colliderect(obstaculo_rect):
-            if taxirect.y +5 < obstaculo_rect.y or taxirect.y  < obstaculo_rect.y -160:
+            if taxirect.y +5 < obstaculo_rect.y or taxirect.y - 100  < obstaculo_rect.y -260:
+                sound_choque.play()
                 x -= 1
                 x_obstaculo -= 1
                 taxirect = taxirect.move(+3,0)
@@ -126,6 +136,8 @@ def action():
         
 
 def mainMenu():
+    sound_init.play(-1)
+    sound_init.set_volume(10)
     surface = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     menu = pygame_menu.Menu('Bienvenido', 400, 300, theme=pygame_menu.themes.THEME_BLUE)
     menu.add.button('Precios', None)

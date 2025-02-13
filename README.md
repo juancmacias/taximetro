@@ -52,10 +52,10 @@ Desarrollar un programa CLI (Interfaz de Línea de Comandos) en Python.
 
 ## 🛠️ Tecnologías a Utilizar
 
-- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg)Python
-- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg)Git y GitHub para control de versiones
-- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg)Trello o Jira para la gestión del proyecto [Projects GitHub](https://github.com/users/juancmacias/projects/9)
-- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg)Bibliotecas adicionales según el nivel de implementación: PostgreSQL, pandas, speech_recognition, pyttsx3. pygame (por ejemplo, logging, unittest, tkinter para GUI, SQLite para base de datos)
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Python
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Git y GitHub para control de versiones
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Trello o Jira para la gestión del proyecto [Projects GitHub](https://github.com/users/juancmacias/projects/9)
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Bibliotecas adicionales según el nivel de implementación: PostgreSQL, pandas, speech_recognition, pyttsx3. pygame (por ejemplo, logging, unittest, tkinter para GUI, SQLite para base de datos)
 - Docker para containerización (nivel experto)
 - Framework web como Flask o Django para la versión web (nivel experto)
 
