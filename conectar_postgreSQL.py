@@ -11,12 +11,16 @@ def insertar_sql(eje):
     cursor.execute(eje)
     connection.commit()
     
-
-def sql_select(table, where):
-    cursor.execute(f"SELECT * FROM {table} WHERE estado = '{where}'")
+# recuperar un único registro
+def sql_select_one(table, where):
+    cursor.execute(f"SELECT * FROM {table} WHERE {where}")
     for pay in cursor:
         return pay[2]
-    #cursor.close()
+
+# recuperar todos los datos de una tabla
+def sql_select_all(table, order="DESC"):
+    cursor.execute(f"SELECT * FROM {table} ORDER BY id {order}")
+    return cursor
 
 # borrar datos de la tabla
 #insert_sql('''TRUNCATE TABLE usuarios''')
@@ -30,11 +34,3 @@ insertar_sql('''CREATE TABLE IF NOT EXISTS usuarios (id SERIAL PRIMARY KEY, nomb
 #insertar_sql('''INSERT INTO usuarios(nombre, usuario) VALUES('Juan', 'a94652aa97c7211ba8954dd15a3cf838')''')
 #insertar_sql('''INSERT INTO precios(estado, precio) VALUES('parado', 0.02)''')
 #insertar_sql('''INSERT INTO precios(estado, precio) VALUES('marcha', 0.05)''')
-
-#cursor.execute("SELECT * FROM precios")
-
-#for query in cursor:
-#    print(query[2])
-
-#query = cursor.execute("SELECT * FROM precios")
-#cursor.close()

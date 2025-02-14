@@ -7,11 +7,12 @@ import conectar_postgreSQL as con
 import pandas as pd
 
 def iniciar_lista():
-    con.cursor.execute("SELECT * FROM trayecto")
+    #con.cursor.execute("SELECT * FROM trayecto")
+    lista = con.sql_select_all("trayecto")
     print(f"{'ID':<5} {'FECHA':<20} {'PRECIO':<10}")
     print(Fore.LIGHTGREEN_EX + "=" * 40 + Fore.WHITE)
     total = 0
-    for id, fecha, precio in con.cursor:
+    for id, fecha, precio in lista:
         fecha_formateada = fecha.strftime("%Y-%m-%d %H:%M") 
         total += precio
         print(f"{id:<5} {fecha_formateada:<20} {Fore.LIGHTWHITE_EX + locale.currency(precio, grouping=True)+ Fore.WHITE}")

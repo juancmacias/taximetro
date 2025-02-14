@@ -40,7 +40,7 @@ Desarrollar un programa CLI (Interfaz de Línea de Comandos) en Python.
 
 ### 🟠 Nivel Avanzado
 
-- Refactorizar el código utilizando un enfoque orientado a objetos (OOP).
+- ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueOpenedOld.svg) Refactorizar el código utilizando un enfoque orientado a objetos (OOP).
 - ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Implementar un sistema de autenticación con contraseñas para proteger el acceso al programa.
 - Desarrollar una interfaz gráfica de usuario (GUI) para hacer el programa más amigable.
 
