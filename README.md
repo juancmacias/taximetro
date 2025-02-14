@@ -4,7 +4,7 @@
 
 Imagen creada con IA Recraft
 
-<img src="https://raw.githubusercontent.com/juancmacias/taximetro/refs/heads/main/imagenes/ico.webp">
+<img src="imagenes/ico.png" height="70px">
 
 <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="python"> 
 <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostGreSQL">

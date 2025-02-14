@@ -6,6 +6,7 @@ try:
     cursor = connection.cursor()
 except: 
       print("No se ha podido conectar a la base de datos.")
+      
 # insertar datos
 def insertar_sql(eje):
     cursor.execute(eje)
