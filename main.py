@@ -29,8 +29,8 @@ locale.setlocale(locale.LC_ALL, '')
 class Taximetro:
     # Constructor
     def __init__(self):
-        self.tarifa_parado = con.sql_select_one('precios', "estado = 'parado'")
-        self.tarifa_movimiento = con.sql_select_one('precios', "estado = 'marcha'")
+        self.pay_stop = con.sql_select_one('precios', "estado = 'parado'")
+        self.pay_move = con.sql_select_one('precios', "estado = 'marcha'")
         self.total = 0
         self.en_trayecto = False
     # uncion para iniciar trayecto, definir variables y calcular tarifa nuevos
@@ -59,7 +59,7 @@ class Taximetro:
             parado = 0
             if kb.is_pressed("m"):
                 elapsed_time = time.time() - start_time
-                en_marcha += self.tarifa_movimiento * elapsed_time
+                en_marcha += self.pay_move * elapsed_time
                 self.total += en_marcha
                 print(Cursor.UP(1) + Fore.YELLOW + "En marcha " + Fore.WHITE)
             elif kb.is_pressed("s"):
@@ -67,7 +67,7 @@ class Taximetro:
                 break
             else:
                 elapsed_time = time.time() - start_time
-                parado += self.tarifa_parado * elapsed_time
+                parado += self.pay_stop * elapsed_time
                 self.total += parado
                 print(Cursor.UP(1) + Fore.RED + "Parado      " + Fore.WHITE)
             self.en_marcha += en_marcha
@@ -173,7 +173,7 @@ def Main():
     print("Bienvenido al prototipo de taxímetro digital.")
     print("Este programa calcula la tarifa de un trayecto según el tiempo de parada y movimiento.\n")
     while True:
-        print("  Listado de precios,", "taxi parado:", Fore.RED + locale.currency(taximetro.tarifa_parado, grouping=True) + Fore.WHITE, ", taxi en movimiento:", Fore.RED + locale.currency(taximetro.tarifa_movimiento, grouping=True) + Fore.WHITE,".")
+        print("  Listado de precios,", "taxi parado:", Fore.RED + locale.currency(taximetro.pay_stop, grouping=True) + Fore.WHITE, ", taxi en movimiento:", Fore.RED + locale.currency(taximetro.pay_move, grouping=True) + Fore.WHITE,".")
         print(Fore.LIGHTWHITE_EX + "t" + Fore.WHITE," - Hacer un " + Fore.RED + "t" + Fore.WHITE + "rayecto")
         print(Fore.LIGHTWHITE_EX + "a" + Fore.WHITE," - List" + Fore.RED + "a" + Fore.WHITE + "r trayectos")
         print(Fore.LIGHTWHITE_EX + "x" + Fore.WHITE," - E" + Fore.RED + "x" + Fore.WHITE + "portar trayectos a un archivo CSV")
