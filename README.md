@@ -68,9 +68,6 @@ Desarrollar un programa CLI (Interfaz de Línea de Comandos) en Python.
 - Presentación técnica del código, destacando fortalezas y debilidades.
 - Enlace al tablero Kanban (GitHub proyectos) utilizado para la organización del proyecto.
 
-## ⏳ Plazo de Entrega
-
-Dos semanas a partir de la fecha de inicio del proyecto.
 
 ## 💡 Consejos para el Desarrollo
 
@@ -85,25 +82,54 @@ Dos semanas a partir de la fecha de inicio del proyecto.
 
 - ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) creación de un entorno CLI; necesitaremos:
 - ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) base de datos PostgreSQL:
-        - Utilice [mkdb](https://www.mkdb.sh/) es gratuido y funciona muy bien, podeis usar el que se ajuste a vuestras necesidades. Las tablas que usaremos sera:
 
+Necesitaremos una carpeta `conf` con un script sql.py donde guardaremos los datos de conexión a la base de datos.
+
+> conf/sql.py
+
+
+        Dentro de `sql.py` tendremos que tener nuestra varables:
+
+        ```python
+                user_sql = "nombre usuario acceso bbdd"
+                password_sql = "contraseña de la bbdd"
+                name_sql = "nombre de la bbdd"```
+
+
+Utilice [mkdb](https://www.mkdb.sh/), es gratuito y funciona muy bien. Podéis usar el que se ajuste a vuestras necesidades. Las tablas que usaremos serán:
 
 ## Base de datos
-      
-        ```
-        CREATE TABLE IF NOT EXISTS precios(id SERIAL PRIMARY KEY, estado CHAR(20) NOT NULL, precio FLOAT)
-        CREATE TABLE IF NOT EXISTS trayecto(id SERIAL PRIMARY KEY, fecha TIMESTAMP NOT NULL DEFAULT NOW(), precio DECIMAL(10,2) NOT NULL)
-        CREATE TABLE IF NOT EXISTS usuarios(id SERIAL PRIMARY KEY, nombre VARCHAR(100) NOT NULL, usuario VARCHAR(50) NIQUE NOT NULL)
-        ```
 
-        Esas seran las tres principales tablas
+```sql
+CREATE TABLE IF NOT EXISTS precios(
+        id SERIAL PRIMARY KEY,
+        estado CHAR(20) NOT NULL,
+        precio FLOAT
+);
+
+CREATE TABLE IF NOT EXISTS trayecto(
+        id SERIAL PRIMARY KEY,
+        fecha TIMESTAMP NOT NULL DEFAULT NOW(),
+        precio DECIMAL(10,2) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS usuarios(
+        id SERIAL PRIMARY KEY,
+        nombre VARCHAR(100) NOT NULL,
+        usuario VARCHAR(50) UNIQUE NOT NULL
+);
+```
+      
+
+
+Esas seran las tres principales tablas
 ## Dependencias:
         
 Para instalar las dependencias, terminal, ser:
 
-        ```
+        
         $ pip install -r requirements.txt
-        ```
+        
 Instalar el entorno para mejorar la eficación de ejecución.
 ## ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Experimental:
 - ![.](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueClosed.svg) Juego de práctica:

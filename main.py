@@ -78,7 +78,7 @@ class Taximetro:
         # investigar para Mac...
         while msvcrt.kbhit():
             msvcrt.getch()
-            
+        
         print("\033[2J\033[1;1f")
         sys.stdin.flush()
         print(f"Trayecto finalizado. Total a cobrar: {Fore.LIGHTWHITE_EX + locale.currency(self.total, grouping=True)+ Fore.WHITE} euros\n", end="\r")
@@ -86,6 +86,7 @@ class Taximetro:
         input("Pulsa una tecla para continuar...")
         print("\033[2J\033[1;1f")
         self.en_trayecto = False
+
 
 # Clase precios
 class Precios:
